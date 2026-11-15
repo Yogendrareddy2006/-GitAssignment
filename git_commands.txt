@@ -1,0 +1,100 @@
+
+GIT COMMANDS AND EXPLANATIONS
+
+1. Local Repository Setup
+
+git init -b main
+Initializes a new Git repository and creates the main branch.
+
+git add .
+Adds all project files to the staging area.
+
+git commit -m "Initial commit: Add HTML project files"
+Creates the first commit containing index.html and about.html.
+
+
+2. Commit and Version Control
+
+git log --oneline
+Displays the repository commit history in a compact format.
+
+git add index.html
+Stages the modified index.html file.
+
+git commit -m "Update homepage with footer"
+Records the homepage modification as a new commit.
+
+
+3. Branching and Merging
+
+git branch feature
+Creates a new branch named feature.
+
+git switch feature
+Switches from the main branch to the feature branch.
+
+git branch
+Lists all local branches and identifies the active branch.
+
+git add about.html
+Stages the changes made to about.html.
+
+git commit -m "Add feature description to about page"
+Commits the feature description added to the about page.
+
+git switch main
+Switches back to the main branch.
+
+git merge feature
+Merges the feature branch into the main branch.
+
+git log --oneline --graph --all
+Displays the commit history with branch relationships.
+
+
+4. .gitignore Implementation
+
+git status
+Displays the current repository status and untracked files.
+
+git add .gitignore
+Stages the .gitignore configuration file.
+
+git commit -m "Add gitignore for log files and temp folder"
+Commits the rules for ignoring log files and the temp folder.
+
+git check-ignore -v test.log temp
+Verifies that test.log and the temp folder are ignored by Git.
+
+
+5. Undo Operation Using Git
+
+git add undo-demo.txt
+Stages the temporary file created for the undo demonstration.
+
+git commit -m "Add temporary file for undo demonstration"
+Creates an additional commit containing undo-demo.txt.
+
+git revert --no-edit HEAD
+Reverses the latest commit by creating a new revert commit without opening an editor.
+
+git log --oneline -5
+Displays the five most recent commits to verify the undo operation.
+
+git status
+Confirms that the working tree is clean after the revert.
+
+
+6. GitHub Integration
+
+git remote add origin https://github.com/Yogendrareddy2006/-GitAssignment.git
+Connects the local repository to the public GitHub repository.
+
+git push -u origin main
+Uploads the main branch to GitHub and establishes upstream tracking.
+
+git push -u origin feature
+Uploads the feature branch to GitHub and establishes upstream tracking.
+
+git branch -a
+Displays all local and remote branches to verify successful synchronization.
